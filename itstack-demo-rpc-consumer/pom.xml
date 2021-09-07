@@ -10,8 +10,8 @@
 
     <properties>
         <sourceEncoding>UTF-8</sourceEncoding>
-        <resteasy.version>2.2.1.GA</resteasy.version>
-        <spring.version>3.1.1.RELEASE</spring.version>
+        <resteasy.version>3.15.1.Final</resteasy.version>
+        <spring.version>5.3.9</spring.version>
         <spring-mybaitis.version>1.2.1</spring-mybaitis.version>
         <mybaitis.version>3.2.3</mybaitis.version>
         <mySqlDriver.version>5.1.20</mySqlDriver.version>
@@ -37,17 +37,12 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.8.2</version>
+            <version>4.13.2</version>
         </dependency>
 
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jaxrs</artifactId>
-            <version>${resteasy.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>jaxrs-api</artifactId>
             <version>${resteasy.version}</version>
         </dependency>
         <dependency>
@@ -94,11 +89,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-asm</artifactId>
             <version>${spring.version}</version>
         </dependency>
         <dependency>
@@ -232,6 +222,7 @@
             </plugin>
             <!-- resources 编码 -->
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>2.4.3</version>
                 <configuration>
@@ -240,6 +231,7 @@
             </plugin>
             <!-- Source attach plugin -->
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
                 <version>2.0.4</version>
                 <executions>

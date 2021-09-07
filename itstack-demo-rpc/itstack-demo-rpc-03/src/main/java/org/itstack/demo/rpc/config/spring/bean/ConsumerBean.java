@@ -30,7 +30,7 @@ public class ConsumerBean<T> extends ConsumerConfig<T> implements FactoryBean {
             String infoStr = RedisRegistryCenter.obtainProvider(nozzle, alias);
             rpcProviderConfig = JSON.parseObject(infoStr, RpcProviderConfig.class);
         }
-        Assert.isTrue(null != rpcProviderConfig);
+        Assert.isTrue(null != rpcProviderConfig, "rpcProviderConfig is null.");
 
         //获取通信channel
         if (null == channelFuture) {
@@ -42,7 +42,7 @@ public class ConsumerBean<T> extends ConsumerConfig<T> implements FactoryBean {
                 channelFuture = clientSocket.getFuture();
             }
         }
-        Assert.isTrue(null != channelFuture);
+        Assert.isTrue(null != channelFuture, "client channel is null.");
 
         Request request = new Request();
         request.setChannel(channelFuture.channel());

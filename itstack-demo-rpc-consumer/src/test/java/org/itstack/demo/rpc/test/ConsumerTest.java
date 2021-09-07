@@ -11,8 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.annotation.Resource;
 
 /**
- * http://www.itstack.org
- * create by fuzhengwei on 2019/5/7
+ * 注册中心的redis： windows环境下可下载： https://github.com/tporadowski/redis/releases
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/spring-config.xml")
