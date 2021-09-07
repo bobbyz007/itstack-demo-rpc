@@ -29,7 +29,7 @@ public class StartClient {
                 }
                 //构建发送参数
                 Request request = new Request();
-                request.setResult("查询用户信息");
+                request.setParam("查询用户信息");
                 SyncWrite s = new SyncWrite();
                 Response response = s.writeAndSync(future.channel(), request, 1000);
                 System.out.println("调用结果：" + JSON.toJSON(response));

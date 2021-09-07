@@ -7,7 +7,7 @@ package org.itstack.demo.rpc.network.msg;
 public class Request {
 
     private String requestId;
-    private Object result;
+    private Object param;
 
     public String getRequestId() {
         return requestId;
@@ -17,12 +17,12 @@ public class Request {
         this.requestId = requestId;
     }
 
-    public Object getResult() {
-        return result;
+    public Object getParam() {
+        return param;
     }
 
-    public void setResult(Object result) {
-        this.result = result;
+    public void setParam(Object param) {
+        this.param = param;
     }
 
 }

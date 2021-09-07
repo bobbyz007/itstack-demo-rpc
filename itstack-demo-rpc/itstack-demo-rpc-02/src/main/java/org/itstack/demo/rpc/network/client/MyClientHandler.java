@@ -16,6 +16,7 @@ public class MyClientHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object obj) throws Exception {
         Response msg = (Response) obj;
         String requestId = msg.getRequestId();
+        // 告诉服务端收到响应了
         SyncWriteFuture future = (SyncWriteFuture) SyncWriteMap.syncKey.get(requestId);
         if (future != null) {
             future.setResponse(msg);
