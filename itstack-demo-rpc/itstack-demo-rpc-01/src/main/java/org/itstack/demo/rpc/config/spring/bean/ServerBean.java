@@ -16,11 +16,11 @@ public class ServerBean extends ServerConfig implements InitializingBean, Applic
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        this.applicationContext = applicationContext;
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.applicationContext = applicationContext;
         System.out.format("服务端信息=> [注册中心地址：%s] [注册中心端口：%s] \r\n", host, port);
     }
 

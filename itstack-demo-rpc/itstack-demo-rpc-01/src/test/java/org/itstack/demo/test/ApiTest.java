@@ -1,5 +1,9 @@
 package org.itstack.demo.test;
 
+import org.itstack.demo.rpc.config.spring.bean.ConsumerBean;
+import org.itstack.demo.rpc.config.spring.bean.ProviderBean;
+import org.itstack.demo.rpc.config.spring.bean.ServerBean;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -11,7 +15,10 @@ public class ApiTest {
 
     public static void main(String[] args) {
         String[] configs = {"itstack-rpc-consumer.xml", "itstack-rpc-provider.xml"};
-        new ClassPathXmlApplicationContext(configs);
+        ApplicationContext ctx = new ClassPathXmlApplicationContext(configs);
+        ProviderBean providerBean = (ProviderBean) ctx.getBean("provider_helloService");
+        ctx.getBean("consumer_helloService");
+        ServerBean serverBean = (ServerBean) ctx.getBean("consumer_itstack");
     }
 
 }

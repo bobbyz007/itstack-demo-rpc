@@ -25,14 +25,14 @@
 
     <properties>
         <!-- Common libs -->
-        <spring_version>3.2.0.RELEASE</spring_version>
-        <javassist_version>3.19.0-GA</javassist_version>
-        <netty_version>4.1.36.Final</netty_version>
+        <spring_version>5.3.9</spring_version>
+        <javassist_version>3.28.0-GA</javassist_version>
+        <netty_version>4.1.67.Final</netty_version>
         <!-- 3rd extends libs -->
-        <servlet_version>2.5</servlet_version>
-        <resteasy_version>3.0.8.Final</resteasy_version>
-        <cxf_version>2.6.1</cxf_version>
-        <jetty_version>7.5.4.v20111024</jetty_version>
+        <servlet_version>4.0.1</servlet_version>
+        <resteasy_version>3.15.1.Final</resteasy_version>
+        <cxf_version>3.4.4</cxf_version>
+        <jetty_version>11.0.6</jetty_version>
         <!-- Log libs -->
         <log4j_version>1.2.17</log4j_version>
         <slf4j_version>1.7.5</slf4j_version>
@@ -41,12 +41,11 @@
         <easymock_version>3.0</easymock_version>
         <jmockit_version>0.999.8</jmockit_version>
         <!-- built-in libs -->
-        <hessian_version>4.0.7</hessian_version>
-        <msgpack_version>0.6.11</msgpack_version>
-        <fastjson_version>1.2.10</fastjson_version>
+        <hessian_version>4.0.65</hessian_version>
+        <fastjson_version>1.2.78</fastjson_version>
         <jedis_version>2.6.0</jedis_version>
-        <protostuff.version>1.0.10</protostuff.version>
-        <objenesis.version>2.4</objenesis.version>
+        <protostuff.version>1.1.6</protostuff.version>
+        <objenesis.version>3.2</objenesis.version>
         <!-- Build args -->
         <argline>-Xms512m -Xmx512m</argline>
         <skip_maven_deploy>false</skip_maven_deploy>
@@ -214,7 +213,7 @@
 
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
+            <artifactId>javax.servlet-api</artifactId>
             <version>${servlet_version}</version>
             <scope>provided</scope>
         </dependency>
@@ -296,7 +295,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>2.5</version>
+                <version>3.2.0</version>
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
@@ -304,17 +303,17 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>3.8.1</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>11</source>
+                    <target>11</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.1.2</version>
+                <version>3.2.0</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
